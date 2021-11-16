@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de Lagrange</title>
+</head>
+<script src="lagrange.js"></script>
+
+<body style="background-color: burlywood;">
+
+<div style="height: 100vh; width: 10px; background-color: brown; position:fixed; margin-top: -30px;"></div>
+
+<div style="margin: 30px; padding-left: 11px; padding-bottom: 11px;" >
+    <div style="display: block" id = "input"></div>
+
+    <div style="width: 30%; float: left;">
+        <h1>Forma de Lagrange</h1>
+        <span style="width: 50%;"> N° pontos: <input placeholder="2" value="2" type="number" id="range" min="0" style="width: 25%;"></span> 
+        
+        <form onsubmit=" return setPoints();" id="pontos_controller">
+            <script src="./builder.js"></script>
+            
+            <div style="width: 100%;">
+                <span style="width: 10%;display: inline-block;text-align: center;"> label </span>
+                <span style="width: 40%;display: inline-block;text-align: center;"> x </span>
+                <span style="width: 40%;display: inline-block;text-align: center;"> f(x) </span>
+            </div>                
+                
+            <container id="pontos"></container>
+            <button>Calcular</button>
+            
+        </form>
+
+    </div>
+    
+    <div style="width: 67%; float: right; height: 80vh; background-color: aliceblue;">
+        <canvas style="box-shadow: 0px 5px 10px #8b9dc3; width: 100%; height: 100%;"id="myCanvas"width="640" height="480">
+            <script src='./Graph-Plotter/GraphPlotter.js'></script>
+        </canvas>
+    </div>
+</div>
+
+<script> build(); </script>
+</body>
+</html>
